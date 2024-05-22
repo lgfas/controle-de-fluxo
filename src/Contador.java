@@ -12,12 +12,12 @@ public class Contador {
         try {
             contar(parametroUm,parametroDois);
         } catch (ParametroInvalidoException exception){
-            System.out.println("O segundo parâmetro deve ser maior que o primeiro");
+            System.out.println(exception.getMessage());
         }
 
     }
 
-    static void contar(int parametroUm, int parametroDois) {
+    static void contar(int parametroUm, int parametroDois) throws ParametroInvalidoException{
         if (parametroUm > parametroDois) {
             throw new ParametroInvalidoException("O segundo parâmetro deve ser maior que o primeiro");
         }
